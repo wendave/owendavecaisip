@@ -1,0 +1,283 @@
+/* Integrate Fonts */
+@font-face {
+  font-family: "Anime Ace";
+  src: url("../assets/fonts/anime-ace.eot");
+  src: 
+  url("../assets/fonts/anime-ace.woff") format("woff"),
+  url("../assets/fonts/anime-ace.otf") format("opentype"),
+  url("../assets/fonts/anime-ace.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Gnuolane Regular";
+  src: url("../assets/fonts/gnuolane-regular.eot");
+  src: 
+  url("../assets/fonts/gnuolane-regular.woff") format("woff"),
+  url("../assets/fonts/gnuolane-regular.otf") format("opentype"),
+  url("../assets/fonts/gnuolane-regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: "SF Cartoonist Hand";
+  src: url("../assets/fonts/sf-cartoonist-hand.eot");
+  src: 
+  url("../assets/fonts/sf-cartoonist-hand.woff") format("woff"),
+  url("../assets/fonts/sf-cartoonist-hand.otf") format("opentype"),
+  url("../assets/fonts/sf-cartoonist-hand.svg") format("svg");
+}
+
+@font-face {
+  font-family: "Web Letterer BB";
+  src: url("../assets/fonts/web-letterer-bb.eot");
+  src: 
+  url("../assets/fonts/web-letterer-bb.woff") format("woff"),
+  url("../assets/fonts/web-letterer-bb.otf") format("opentype"),
+  url("../assets/fonts/web-letterer-bb.svg") format("svg");
+}
+
+
+/* Custom Predefined Style for Typography */
+.text-center {
+  text-align: center;
+}
+
+a {
+  -webkit-transition: all .3s cubic-bezier(.65, .05, .36, 1);
+  -o-transition: all .3s cubic-bezier(.65, .05, .36, 1);
+  transition: all .3s cubic-bezier(.65, .05, .36, 1);
+}
+
+
+/* Styles for Typography */
+.banner-title {
+  padding: 10px 0;
+  margin: 0;
+  font: normal 60px "Anime Ace";
+  text-shadow: 4px 6px 0 #000, 6px 9px 0 #d10000;
+  color: #fff;
+}
+
+.banner-subtitle {
+  position: relative;
+  margin: 0;
+  padding: 7px 0;
+  font: normal 36px "Web Letterer BB";
+  color: #fff;
+}
+
+.banner-subtitle:after {
+  content: '';
+  position: absolute;
+  top: initial;
+  right: 0;
+  bottom: 1px;
+  left: 0;
+  margin: auto;
+  width: calc(100% - 3px);
+  border-bottom: 3px solid #fff;
+}
+
+.title {
+  margin: 12px 0;
+  font: normal 48px "SF Cartoonist Hand";
+  color: #d10000;
+}
+
+.subtitle {
+  margin: 10px 0;
+  font: normal 28px "Gnuolane Regular";
+  color: #fff;
+}
+
+.subtitle-dot {
+  position: relative;
+  padding-left: 20px;
+}
+
+.subtitle-dot:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 9px;
+  height: 9px;
+  background-color: #fff;  
+  border-radius: 50%;
+}
+
+.subtitle-dot + .unstyled {
+  top: -10px;
+}
+
+.unstyled {
+  position: relative;
+  margin: 15px 0;
+  padding: 0 0 0 40px;
+  list-style-type: none;
+}
+
+.description,
+.content-list {
+  position: relative;
+  font: normal 24px "SF Cartoonist Hand";
+  line-height: 39px;
+  color: #fff;
+}
+
+.description-avatar {
+  margin: 15px auto auto;
+  max-width: 340px;
+  font: normal 26px "SF Cartoonist Hand";
+  line-height: 30px;
+  color: #fff;
+}
+
+.content-list:before {
+  content: '-';
+  position: absolute;
+  top: 0;
+  right: initial;
+  bottom: 0;
+  left: -20px;
+  margin: auto;
+}
+
+.content-list-asterisk:before {
+  content: '*';
+}
+
+.content-link {
+  color: #fff;
+}
+
+.content-link:hover,
+.content-link:focus {
+  color: #d10000;
+}
+
+/***************************************
+ ***********  Media Queries  ***********
+ ***************************************/
+
+/* Screen Resolution max-width 1440px */
+@media screen and (max-width: 1440px) {
+  .title {
+    font-size: 46px;
+  }
+
+  .subtitle {
+    font-size: 26px;
+  }
+
+  .description,
+  .content-list {
+    font-size: 22px;
+  }
+}
+
+/* Screen Resolution max-width 1280pxx */
+@media screen and (max-width: 1280px) {
+  .banner-title {
+    font-size: 48px;
+  }
+
+  .banner-subtitle {
+    font-size: 28.5px;
+  }
+
+  .title {
+    margin: 10px 0;
+    font-size: 38px;
+  }
+
+  .subtitle {
+    margin: 5px 0;
+    font-size: 20px;
+  }
+
+  .subtitle-dot {
+    padding-left: 15px;
+  }
+
+  .subtitle-dot:before {
+    width: 6px;
+    height: 6px;
+  }
+
+  .unstyled {
+    padding-left: 30px;
+    margin: 10px 0;
+  }
+
+  .description, 
+  .content-list {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .description-avatar {
+    max-width: 290px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+/* Screen Resolution max-width 991px */
+@media screen and (max-width: 991px) {
+  .description-avatar {
+    margin-top: 30px;
+    max-width: 300px;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+    letter-spacing: .5px;
+  }
+
+  .description,
+  .content-list {
+    font-size: 22px;
+    letter-spacing: .5px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .banner-title {
+    padding-bottom: 5px;
+    font-size: 32px;
+  }
+
+  .banner-subtitle {
+    font-size: 20px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .subtitle,
+  .description, 
+  .content-list {
+    font-size: 20px;
+  }
+}
+
+/* Screen Resolution max-width 480px */
+@media screen and (max-width: 480px) {
+  .banner-title {
+    padding-bottom: 0;
+    font-size: 26px;
+    line-height: 50px;
+    text-align: center;
+  }
+
+  .banner-subtitle {
+    font-size: 16px;
+  }
+}
